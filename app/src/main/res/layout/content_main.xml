@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.appsnipp.news.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    style="@style/parent.contentLayout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingBottom="10dp"
+        android:elevation="999dp"
+        android:gravity="bottom"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_edittext_bg"
+            android:hint="@string/text_hint"
+            android:textAlignment="center"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+
+    </RelativeLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="?attr/actionBarSize"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/normalPadding"
+            android:paddingLeft="@dimen/normalPadding">
+
+            <!--replace with  Scroll recycler view-->
+           <android.support.v7.widget.RecyclerView
+               android:id="@+id/scroll_view"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               />
+            
+            <!--replace with  feature recycler view-->
+
+               <android.support.v7.widget.RecyclerView
+                   android:id="@+id/featureRecyclerView"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>
+
+            <!--replace with recycler  news view-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/news_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

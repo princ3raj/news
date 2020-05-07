@@ -1,0 +1,54 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginTop="40dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/newsThumbnailImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/img_thumbnail"/>
+
+    <TextView
+        android:id="@+id/newsTitleTextView"
+        style="@style/viewParent.headerText"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/newsThumbnailImageView"
+        android:textSize="15sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="Back to beige: decoding this \nseason’s most unlikely, of the "/>
+
+    <TextView
+        android:id="@+id/newsDetailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/featuredNewsContentColor"
+        android:layout_toRightOf="@id/newsThumbnailImageView"
+        android:layout_below="@id/newsTitleTextView"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="As far as trends go, you’d be forgiven \nfor assuming that beige equals boring. "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 hrs ago"
+        android:layout_alignParentBottom="true"
+        android:textColor="#8E909A"
+        android:textSize="11sp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/newsThumbnailImageView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read More >"
+        android:textStyle="bold"
+        android:textSize="11sp"
+        android:textColor="#019AE8"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">News App</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="text_hint"><b>Search Latest News...</b></string>
+
+    <!-- Strings related to login -->
+</resources>
