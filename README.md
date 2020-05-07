@@ -1,3 +1,6 @@
 # News App Preview
-#UI Design by Kapil Mohan
+__Ui design By Kapil Mohan
+
 ![](app/src/main/res/drawable/app_preview.png)
+
+
