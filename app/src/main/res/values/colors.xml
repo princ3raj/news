@@ -14,5 +14,9 @@
     <color name="miniTitle">#2A2E43</color>
     <color name="featuredNewsContentColor">#8E909A</color>
 
+    <color name="colorForRipple">#94928e</color>
+
+
+
 
 </resources>

@@ -97,11 +97,11 @@ public final class QueryUtils {
                 String title=currentArticle.getString("title");
                 String description=currentArticle.getString("description");
                 String urlOfImage=currentArticle.getString("urlToImage");
-                Bitmap bitmap=fetchThumbnail(urlOfImage);
+//                Bitmap bitmap=fetchThumbnail(urlOfImage);
                 String url=currentArticle.getString("url");
                 String publishedDate=currentArticle.getString("publishedAt");
 
-                NewsDetails currentNewsDetails=new NewsDetails(title,description,sourceName,publishedDate,bitmap,url);
+                NewsDetails currentNewsDetails=new NewsDetails(title,description,sourceName,publishedDate,urlOfImage,url);
                 news.add(currentNewsDetails);
             }
         } catch (JSONException e) {

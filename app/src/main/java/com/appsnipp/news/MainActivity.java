@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, LoaderManager.LoaderCallbacks<ArrayList<NewsDetails>> {
 
     private static final String TAG = "MainActivity";
+  
 
     //URL and Network Related Work
 
@@ -145,7 +146,7 @@ public class MainActivity extends AppCompatActivity
         mScrollRecyclerView.setHasFixedSize(true);
         mScrollLayoutManager= new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false);
         mScrollRecyclerView.setLayoutManager(mScrollLayoutManager);
-        mScrollRecyclerAdapter= new ScrollRecyclerAdapter();
+        mScrollRecyclerAdapter= new ScrollRecyclerAdapter(this);
         mScrollRecyclerView.setAdapter(mScrollRecyclerAdapter);
 
         //Feature Recycler View Setup
@@ -154,7 +155,7 @@ public class MainActivity extends AppCompatActivity
         mFeatureRecyclerView.setHasFixedSize(true);
         mFeatureLayoutManager=new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false);
         mFeatureRecyclerView.setLayoutManager(mFeatureLayoutManager);
-        mFeatureRecyclerAdapter=new FeatureRecyclerAdapter();
+        mFeatureRecyclerAdapter=new FeatureRecyclerAdapter(this);
         mFeatureRecyclerView.setAdapter(mFeatureRecyclerAdapter);
 
         //News RecyclerView set up
@@ -163,7 +164,7 @@ public class MainActivity extends AppCompatActivity
         mNewsRecyclerView.setHasFixedSize(true);
         mNewsLayoutManager=new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         mNewsRecyclerView.setLayoutManager(mNewsLayoutManager);
-        mNewsRecyclerAdapter=new NewsRecyclerAdapter();
+        mNewsRecyclerAdapter=new NewsRecyclerAdapter(this);
         mNewsRecyclerView.setAdapter(mNewsRecyclerAdapter);
 
         //reference of empty TextView and progressbar
@@ -256,13 +257,16 @@ public class MainActivity extends AppCompatActivity
     @Override
     public Loader<ArrayList<NewsDetails>> onCreateLoader(int id, Bundle args) {
 
-        Uri uri = Uri.parse(primaryUrlForEverythingAndSelectAllOption);
+        Uri uri = Uri.parse(primaryUrl);
         Uri.Builder builder = uri.buildUpon();
-        builder.appendQueryParameter("q", query);
-        builder.appendQueryParameter("language", "en");
+        builder.appendQueryParameter("country","in");
+//        builder.appendQueryParameter("q", query);
+//        builder.appendQueryParameter("language", "en");
         builder.appendQueryParameter("apiKey", apikey);
 
         requestUrl = builder.toString();
+
+        Log.i(TAG, "onCreateLoader: "+requestUrl);
 
         return new NewsLoader(this, requestUrl);
 

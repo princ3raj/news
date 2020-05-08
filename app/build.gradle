@@ -31,5 +31,9 @@ dependencies {
     //for circular image
     implementation 'de.hdodenhof:circleimageview:3.0.0'
 
+    //picasso library
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+
 
 }

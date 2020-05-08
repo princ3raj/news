@@ -9,11 +9,11 @@ public class NewsDetails {
     private String mDescriptionOrContent;
     private String mSourceOfNews;
     private String mDateTimeOfNews;
-    private Bitmap mUrlOfImage;
+    private String mUrlOfImage;
     private String mUrl;
 
 
-    public NewsDetails(String mTitle, String mCategory, String mDescriptionOrContent, String mSourceOfNews, String mDateTimeOfNews, Bitmap mUrlOfImage, String mUrl) {
+    public NewsDetails(String mTitle, String mCategory, String mDescriptionOrContent, String mSourceOfNews, String mDateTimeOfNews, String mUrlOfImage, String mUrl) {
         this.mTitle = mTitle;
         this.mCategory = mCategory;
         this.mDescriptionOrContent = mDescriptionOrContent;
@@ -23,7 +23,7 @@ public class NewsDetails {
         this.mUrl = mUrl;
     }
 
-    public NewsDetails(String mTitle, String mDescriptionOrContent, String mSourceOfNews, String mDateTimeOfNews, Bitmap mUrlOfImage, String mUrl) {
+    public NewsDetails(String mTitle, String mDescriptionOrContent, String mSourceOfNews, String mDateTimeOfNews, String mUrlOfImage, String mUrl) {
         this.mTitle = mTitle;
         this.mCategory = mCategory;
         this.mDescriptionOrContent = mDescriptionOrContent;
@@ -53,7 +53,7 @@ public class NewsDetails {
         return mDateTimeOfNews;
     }
 
-    public Bitmap getmUrlOfImage() {
+    public String getmUrlOfImage() {
         return mUrlOfImage;
     }
 

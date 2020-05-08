@@ -46,7 +46,10 @@
             <!--replace with  Scroll recycler view-->
            <android.support.v7.widget.RecyclerView
                android:id="@+id/scroll_view"
+               android:background="?android:attr/selectableItemBackground"
                android:layout_width="match_parent"
+               android:clickable="true"
+               android:focusable="true"
                android:layout_height="wrap_content"
                />
             
